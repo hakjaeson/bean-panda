@@ -1,11 +1,8 @@
-import BasicLayout from "./layout/BasicLayout";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/root";
 
 function App() {
-  return (
-    <BasicLayout>
-      <main>반갑다.</main>
-    </BasicLayout>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
