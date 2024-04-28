@@ -1,3 +1,4 @@
+import { MainWrap } from "../styles/LayoutStyles";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -7,7 +8,7 @@ const BasicLayout = ({ children }) => {
       <div>
         <Header />
       </div>
-      {children}
+      <MainWrap>{children}</MainWrap>
       <div>
         <Footer />
       </div>

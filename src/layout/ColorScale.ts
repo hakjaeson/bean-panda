@@ -10,7 +10,7 @@ export const ColorStyle = {
   p700: "#3e0007",
   p800: "#0b0001",
 
-  secondary: "#066E52",
+  secondary: "#2C2A29",
   s100: "#099e76",
   s200: "#0bcf9a",
   s300: "#1af3b8",
