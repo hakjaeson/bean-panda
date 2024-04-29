@@ -1,8 +1,13 @@
+import { ReactNode } from "react";
 import { MainWrap } from "../styles/LayoutStyles";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const BasicLayout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const BasicLayout = ({ children }: LayoutProps) => {
   return (
     <div>
       <div>
