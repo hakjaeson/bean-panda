@@ -108,5 +108,5 @@ export const FooterWrap = styled.div`
 export const MainWrap = styled.main`
   width: 118rem;
   margin: 0 auto;
-  border: 0.1rem solid black;
+  /* border: 0.1rem solid black; */
 `;

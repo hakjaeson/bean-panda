@@ -4,6 +4,9 @@ import { CommuList } from "../../interface/CommuInterface";
 import { useMemo } from "react";
 import { PageTitle, TableWrap } from "../../styles/community/CommuStyles";
 import CommonBtn from "../../components/common/CommonBtn";
+import SubBtn from "../../components/common/SubBtn";
+import useNav from "../../hooks/useNav";
+import SearchForm from "../../components/common/SearchForm";
 
 const CommuListPage = () => {
   const { data } = useQuery({
@@ -12,7 +15,7 @@ const CommuListPage = () => {
   });
   const ServerData = useMemo(() => data, [data]);
   console.log("data", ServerData);
-
+  const { moveToCommuCreate } = useNav();
   return (
     <div style={{ padding: "0 3rem 0 3rem" }}>
       <PageTitle>커뮤니티</PageTitle>
@@ -36,12 +39,19 @@ const CommuListPage = () => {
         </div>
       </TableWrap>
       {/* ETC */}
-      <div style={{ display: "flex", padding: "3rem 0" }}>
-        <form>
-          <input type="text" placeholder="검색어를 입력해주세요." />
-          <button>검색</button>
-        </form>
-        <CommonBtn btnName="글쓰기" />
+      <div
+        style={{
+          // width: "100%",
+          display: "flex",
+          padding: "3rem 0",
+          alignContent: "center",
+          justifyContent: "flex-end",
+          gap: "1rem",
+          // float: "right",
+        }}
+      >
+        {/* <SearchForm onClick={} onChange={} /> */}
+        <CommonBtn btnName="글쓰기" onClick={moveToCommuCreate} />
       </div>
     </div>
   );
