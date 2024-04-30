@@ -1,15 +1,15 @@
 import { ColorStyle, FontSize } from "../../layout/ColorScale";
 
-type CommonBtnProps = {
+type SubBtnProps = {
   btnName: string;
   onClick: () => void;
 };
 
-const CommonBtn = (props: CommonBtnProps) => {
+const SubBtn = (props: SubBtnProps) => {
   const { btnName, onClick } = props;
   const btnStyle = {
     cursor: "pointer",
-    background: `${ColorStyle.g900}`,
+    background: `${ColorStyle.g300}`,
     fontSize: `${FontSize.xl}`,
     color: `${ColorStyle.grayScale}`,
     border: "none",
@@ -23,5 +23,4 @@ const CommonBtn = (props: CommonBtnProps) => {
     </button>
   );
 };
-
-export default CommonBtn;
+export default SubBtn;

@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Navigate } from "react-router-dom";
 
 const ListPage = lazy(() => import("../pages/community/CommuListPage"));
+const CreatePage = lazy(() => import("../pages/community/CommuCreatePage"));
 
 // @COMMENT @AREA community router
 
@@ -20,7 +21,7 @@ const commuRouter = () => {
       path: "create",
       element: (
         <Suspense fallback={<div>로딩 중..</div>}>
-          <ListPage />
+          <CreatePage />
         </Suspense>
       ),
     },

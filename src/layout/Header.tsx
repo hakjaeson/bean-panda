@@ -1,21 +1,33 @@
+import useNav from "../hooks/useNav";
 import { HeaderWrap } from "../styles/LayoutStyles";
 
 const Header = () => {
+  const {
+    moveToBean,
+    moveToCoffee,
+    moveToOrder,
+    moveToShop,
+    moveToCommunity,
+    moveToSignin,
+    moveToSignup,
+    moveToMypage,
+    moveToFaq,
+  } = useNav();
   return (
     <HeaderWrap>
       <div className="header-inner">
         <ul className="header-info">
           <li>
-            <span>Sign In</span>
+            <span onClick={moveToSignin}>Sign In</span>
           </li>
           <li>
-            <span>Sign Up</span>
+            <span onClick={moveToSignup}>Sign Up</span>
           </li>
           <li>
-            <span>My Page</span>
+            <span onClick={moveToMypage}>My Page</span>
           </li>
           <li>
-            <span>FAQ</span>
+            <span onClick={moveToFaq}>FAQ</span>
           </li>
         </ul>
 
@@ -25,19 +37,19 @@ const Header = () => {
           </div>
           <ul className="header-category">
             <li>
-              <span>COFFEE BEAN</span>
+              <span onClick={moveToBean}>COFFEE BEAN</span>
             </li>
             <li>
-              <span>COFFEE</span>
+              <span onClick={moveToCoffee}>COFFEE</span>
             </li>
             <li>
-              <span>PRE-ORDER</span>
+              <span onClick={moveToOrder}>PRE-ORDER</span>
             </li>
             <li>
-              <span>SHOP</span>
+              <span onClick={moveToShop}>SHOP</span>
             </li>
             <li>
-              <span>NOTICE</span>
+              <span onClick={moveToCommunity}>COMMUNITY</span>
             </li>
           </ul>
         </div>
