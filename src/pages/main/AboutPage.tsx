@@ -1,7 +1,13 @@
 import BasicLayout from "../../layout/BasicLayout";
 
 const AboutPage = () => {
-  return <BasicLayout>AboutPage</BasicLayout>;
+  return (
+    <BasicLayout>
+      <div>
+        
+      </div>
+    </BasicLayout>
+  );
 };
 
 export default AboutPage;
