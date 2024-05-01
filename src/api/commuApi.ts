@@ -11,3 +11,16 @@ export const getCommuList = async () => {
     console.log(error);
   }
 };
+
+export const postCommu = async () => {
+  try {
+    const response = await axios.post(".../");
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      console.log("error code : ", response.status);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
