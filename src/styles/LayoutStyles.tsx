@@ -41,7 +41,7 @@ export const HeaderWrap = styled.div`
       gap: 3rem;
       span {
         cursor: pointer;
-        font-size: ${FontSize.xxl};
+        font-size: ${FontSize.xl};
       }
     }
   }
@@ -54,7 +54,7 @@ export const HeaderWrap = styled.div`
     gap: 2rem;
     span {
       color: ${ColorStyle.g800};
-      font-size: ${FontSize.xxl};
+      font-size: ${FontSize.xl};
       cursor: pointer;
     }
   }

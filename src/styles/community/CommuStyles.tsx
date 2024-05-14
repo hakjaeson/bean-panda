@@ -35,8 +35,15 @@ export const TableWrap = styled.div`
   }
 `;
 
-export const PageTitle = styled.div`
+export const FormWrap = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   padding: 3rem 0;
-  font-size: ${FontSize.sub_title};
-  font-weight: 700;
+
+  .form-title {
+  }
+  .form-content {
+    height: 50rem;
+  }
 `;

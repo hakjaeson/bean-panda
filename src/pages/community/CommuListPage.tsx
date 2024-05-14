@@ -4,7 +4,12 @@ import { getCommuList } from "../../api/commuApi";
 import CommonBtn from "../../components/common/CommonBtn";
 import useNav from "../../hooks/useNav";
 import { CommuList } from "../../interface/CommuInterface";
+
 import { PageTitle, TableWrap } from "../../styles/community/CommuStyles";
+
+import { TableWrap } from "../../styles/community/CommuStyles";
+import { PageTitle } from "../../styles/common/CommonStyles";
+
 
 const CommuListPage = () => {
   const { data } = useQuery({
