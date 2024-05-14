@@ -1,12 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCommuList } from "../../api/commuApi";
-import { CommuList } from "../../interface/CommuInterface";
 import { useMemo } from "react";
-import { PageTitle, TableWrap } from "../../styles/community/CommuStyles";
+import { getCommuList } from "../../api/commuApi";
 import CommonBtn from "../../components/common/CommonBtn";
-import SubBtn from "../../components/common/SubBtn";
 import useNav from "../../hooks/useNav";
-import SearchForm from "../../components/common/SearchForm";
+import { CommuList } from "../../interface/CommuInterface";
+import { PageTitle, TableWrap } from "../../styles/community/CommuStyles";
 
 const CommuListPage = () => {
   const { data } = useQuery({
@@ -29,7 +27,7 @@ const CommuListPage = () => {
         </div>
         <div>
           {ServerData?.map((item: CommuList) => (
-            <div key={item.pk} style={{ display: "flex" }}>
+            <div key={item.id} style={{ display: "flex" }}>
               <div className="table-td table-no">{item.id}</div>
               <div className="table-td table-title">{item.title}</div>
               <div className="table-td table-author">{item.author}</div>

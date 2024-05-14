@@ -4,6 +4,7 @@ import commuRouter from "./commuRouter";
 
 const AboutPage = lazy(() => import("../pages/main/AboutPage"));
 const CommunityPage = lazy(() => import("../pages/community/CommuPage"));
+const FirebasePage = lazy(() => import("../pages/firebase-test/FirebasePage"));
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
       </Suspense>
     ),
     children: commuRouter(),
+  },
+  {
+    path: "/firebase",
+    element: (
+      <Suspense fallback={<div>Loading</div>}>
+        <FirebasePage />
+      </Suspense>
+    ),
   },
 ]);
 export default router;
