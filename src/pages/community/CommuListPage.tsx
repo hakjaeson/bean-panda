@@ -4,8 +4,12 @@ import { getCommuList } from "../../api/commuApi";
 import CommonBtn from "../../components/common/CommonBtn";
 import useNav from "../../hooks/useNav";
 import { CommuList } from "../../interface/CommuInterface";
+
+import { PageTitle, TableWrap } from "../../styles/community/CommuStyles";
+
 import { TableWrap } from "../../styles/community/CommuStyles";
 import { PageTitle } from "../../styles/common/CommonStyles";
+
 
 const CommuListPage = () => {
   const { data } = useQuery({
@@ -28,7 +32,7 @@ const CommuListPage = () => {
         </div>
         <div>
           {ServerData?.map((item: CommuList) => (
-            <div key={item.pk} style={{ display: "flex" }}>
+            <div key={item.id} style={{ display: "flex" }}>
               <div className="table-td table-no">{item.id}</div>
               <div className="table-td table-title">{item.title}</div>
               <div className="table-td table-author">{item.author}</div>
